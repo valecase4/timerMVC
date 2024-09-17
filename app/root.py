@@ -1,12 +1,16 @@
 from tkinter import *
-from .view.button import MyButton
-from .view.label import MyLabel
+from .view.view import View
 
-class Root(Tk):
-    def __init__(self, controller):
+class App(Tk):
+    """
+    Root of the application
+    """
+
+    def __init__(self) -> None:
         super().__init__()
 
-        self.controller = controller
+        self.view = View(self, None)
+        self.view.pack()
 
         self.WIDTH = 800
         self.HEIGHT = 400
@@ -14,7 +18,3 @@ class Root(Tk):
         self.geometry(f"{self.WIDTH}x{self.HEIGHT}")
         self.title("Timer")
         self.resizable(False, False)
-
-        button = MyButton(self, self.controller)
-        button.pack()
-

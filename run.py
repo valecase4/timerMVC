@@ -1,7 +1,5 @@
-from app.root import Root
-from app.controller import Controller
+from app.root import App
 
 if __name__ == '__main__':
-    controller = Controller()
-    root = Root(controller)
-    root.mainloop()
+    app = App()
+    app.mainloop()
