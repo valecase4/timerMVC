@@ -4,6 +4,8 @@
 
 ### Approach
 
+MVC stands for model-view-controller. As a software design pattern, it's widely used for GUI (e.g., this application).
+
 - Model: manage the backend logic and communicate with view through controller
 - View: manage the application's UI
 - Controller: build the connection between model and view
